@@ -10,7 +10,7 @@ data = [
             {
                 'dept_id': 5,
                 'name': 'xxx部门',
-                'attention_name': 'name5;name6',
+                'attention_name': 'name5;name4',
                 'children': []
             },
             {
@@ -44,12 +44,20 @@ data = [
 
 
 def get_item(raw_data, name):
-    if raw_data is None or raw_data.get('attention_name') is None:
-        return
-    if name in raw_data['attention_name']:
-        return data
-    return get_item(raw_data.get('children'), name)
+    if raw_data is None:
+        return None
+    for it in raw_data:
+        if name in it['attention_name']:
+            return it
+        else:
+            return get_item(it.get('children'), name)
+    # if raw_data is None or raw_data.get('attention_name') is None:
+    #     return
+    # if name in raw_data['attention_name']:
+    #     return data
+    # return get_item(raw_data.get('children'), name)
 
 if __name__ == '__main__':
-    for it in data:
-        item = get_item(it, 'name4')
+    # for it in data:
+    item = get_item(data, 'name4')
+    print item
