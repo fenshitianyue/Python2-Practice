@@ -34,5 +34,6 @@ tmp = {
 index = bin_search(bg_data, tmp['dept_id'])
 bg_data[index]['children'].append(tmp)
 
+print bg_data[index]
 print bg_data[index]['children']
 
