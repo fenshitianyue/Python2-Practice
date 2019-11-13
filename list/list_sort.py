@@ -9,10 +9,11 @@ for i in range(10):
     item.update({'child': []})
     data.append(item)
 
-def takeKey(elem):
-    return elem['num']
+# def takeKey(elem):
+#     return elem['num']
 
-data.sort(key=takeKey, reverse=True)
+# data.sort(key=takeKey, reverse=True)
+data.sort(key=lambda elem: elem['num'])
 
 print data
 
