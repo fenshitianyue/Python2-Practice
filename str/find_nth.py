@@ -13,5 +13,5 @@ s = '10-11-12-'
 t = '-'
 
 print s[0:find_nth(s, t, 1)]
-print s[0:find_nth(s, t, 2)]
-print s[0:find_nth(s, t, 3)]
+print s[find_nth(s, t, 1)+1:find_nth(s, t, 2)]
+print s[find_nth(s, t, 2)+1:find_nth(s, t, 3)]
