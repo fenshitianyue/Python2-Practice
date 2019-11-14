@@ -50,8 +50,10 @@ def get_item(raw_data, name):
         if name in it['attention_name']:
             return it
         else:
-            return get_item(it.get('children'), name)
+            result = get_item(it.get('children'), name)
+            if result is not None:
+                return result
 
 if __name__ == '__main__':
-    item = get_item(data, 'name4')
+    item = get_item(data, 'name12')
     print item
