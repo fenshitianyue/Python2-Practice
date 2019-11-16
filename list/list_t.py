@@ -7,3 +7,5 @@ data = [1]
 for it in data:
     data.append(it)
 
+print '出来了~'
+
