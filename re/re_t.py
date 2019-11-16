@@ -20,10 +20,6 @@ attention_name_3 = 'varoamfemh;nelsontang'
 name = 'ls'
 
 if __name__ == '__main__':
-    # pattern = re.compile('^;ls$|^ls;$|^;ls;$')
-    # pattern = re.compile('\;ls')
-    # result = pattern.search(attention_name)
-    # print result
     pattern = '{0};|;{1}|;{2};'.format(name, name, name)
     print pattern
     result = re.search(pattern, attention_name)
