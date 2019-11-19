@@ -13,5 +13,8 @@ s = 'fields,'
 print s[-1]
 
 # s[-1] = ' '
-s = s[0:-1]
+# s = s[0:-1]
+# print s
+s = s.rstrip(',')
+
 print s
