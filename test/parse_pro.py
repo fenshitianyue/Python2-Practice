@@ -17,7 +17,7 @@ def parse_func(filename):
                 data_list.append(it[2])
             elif len(it) == 0:
                 continue
-            elif len(it) == 2 and it[1].find('&nbsp') == -1:
+            elif len(it) == 2 and (it[1].find('&nbsp') == -1 or it[1].find('\r\n') == -1):
                 data_list.append(it[1])
 
 def write_file(filename):
