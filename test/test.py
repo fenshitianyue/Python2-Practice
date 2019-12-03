@@ -31,17 +31,24 @@
 # alias = data_pool[2].split('@')[1]
 # print alias
 
-field = '-field'
-field2 = 'field-to-field'
-field3 = 'field'
+# field = '-field'
+# field2 = 'field-to-field'
+# field3 = 'field'
+#
+#
+# def func(value):
+#     if value.find('-') != 0:
+#         print value
+#     else:
+#         print ''.join(value.split('-')[1:])
+#
+# func(field)
+# func(field2)
+# func(field3)
 
+data = {
+    'field1': 'hello world',
+    'field2': 'test'
+}
 
-def func(value):
-    if value.find('-') != 0:
-        print value
-    else:
-        print ''.join(value.split('-')[1:])
-
-func(field)
-func(field2)
-func(field3)
+print len(data.keys())
