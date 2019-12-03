@@ -46,9 +46,21 @@
 # func(field2)
 # func(field3)
 
-data = {
-    'field1': 'hello world',
-    'field2': 'test'
-}
+# data = {
+#     'field1': 'hello world',
+#     'field2': 'test'
+# }
+# print len(data.keys())
 
-print len(data.keys())
+
+group_by = ['field1', 'field2', 'field3']
+
+dsl_group_by = ''
+
+for it in group_by:
+    dsl_group_by = ''.join([dsl_group_by, "doc['" + it + "'].value", " + '-' + "])
+
+dsl_group_by = dsl_group_by[:len(dsl_group_by) - len(" + '-' + ")]
+
+print dsl_group_by
+
