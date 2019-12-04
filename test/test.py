@@ -66,15 +66,32 @@
 # print dsl_group_by
 
 
-key = "key1:value1;key2:value2;key3:value3"
-result = {}
+# key = "key1:value1;key2:value2;key3:value3"
+# result = {}
+#
+# pair = key.split(';')
+#
+# # print pair
+#
+# for pair_item in pair:
+#     result.update({pair_item.split(':')[0]: pair_item.split(':')[1]})
+#
+# for key, value in result.items():
+#     print '{0}:{1}'.format(key, value)
 
-pair = key.split(';')
+result_list = {
+    {
+        'join_type': None,
+        'fields': ['field1', 'field2', 'field3'],
+        'data': [{}, {}, ]
+    },
+    {
+        'join_type': 'left join',
+        'fields': ['field1', 'field2', 'field3'],
+        'data': [{}, {}, ]
+    },
+}
 
-# print pair
 
-for pair_item in pair:
-    result.update({pair_item.split(':')[0]: pair_item.split(':')[1]})
 
-for key, value in result.items():
-    print '{0}:{1}'.format(key, value)
+
