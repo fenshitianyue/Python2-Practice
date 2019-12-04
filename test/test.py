@@ -53,14 +53,28 @@
 # print len(data.keys())
 
 
-group_by = ['field1', 'field2', 'field3']
+# group_by = ['field1', 'field2', 'field3']
+#
+# dsl_group_by = ''
+#
+# for it in group_by:
+#     # dsl_group_by = ''.join([dsl_group_by, "doc['" + it + "'].value", " + '-' + "])
+#     dsl_group_by = ''.join([dsl_group_by, it, " + ':' + ", "doc['", it, "'].value", " + ';' + "])
+#
+# dsl_group_by = dsl_group_by[:len(dsl_group_by) - len(" + '-' + ")]
+#
+# print dsl_group_by
 
-dsl_group_by = ''
 
-for it in group_by:
-    dsl_group_by = ''.join([dsl_group_by, "doc['" + it + "'].value", " + '-' + "])
+key = "key1:value1;key2:value2;key3:value3"
+result = {}
 
-dsl_group_by = dsl_group_by[:len(dsl_group_by) - len(" + '-' + ")]
+pair = key.split(';')
 
-print dsl_group_by
+# print pair
 
+for pair_item in pair:
+    result.update({pair_item.split(':')[0]: pair_item.split(':')[1]})
+
+for key, value in result.items():
+    print '{0}:{1}'.format(key, value)
