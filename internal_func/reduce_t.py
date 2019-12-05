@@ -9,10 +9,12 @@ nums = [1, 2, 3, 4, 5]
 # print result
 
 result = reduce(lambda x, y: x * y, nums)
-print result
+# print result
 
 # 逆置字符串
 s = 'hello world'
 s = reduce(lambda x, y: y+x, s)
-print s
+# print s
+
+print reduce(lambda x, y: x*y, range(1, 4))
 
