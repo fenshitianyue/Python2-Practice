@@ -79,19 +79,34 @@
 # for key, value in result.items():
 #     print '{0}:{1}'.format(key, value)
 
-result_list = {
-    {
-        'join_type': None,
-        'fields': ['field1', 'field2', 'field3'],
-        'data': [{}, {}, ]
-    },
-    {
-        'join_type': 'left join',
-        'fields': ['field1', 'field2', 'field3'],
-        'data': [{}, {}, ]
-    },
-}
+# result_list = {
+#     {
+#         'join_type': None,
+#         'fields': ['field1', 'field2', 'field3'],
+#         'data': [{}, {}, ]
+#     },
+#     {
+#         'join_type': 'left join',
+#         'fields': ['field1', 'field2', 'field3'],
+#         'data': [{}, {}, ]
+#     },
+# }
 
+
+# def test_parm(parm1, parm2, parm3=False):
+#     print 'string: {}'.format(parm1)
+#     print 'integer: {}'.format(parm2)
+#     print 'boolen: {}'.format(parm3)
+#
+# test_parm('hello', 10, True)
+
+a = 'hello'
+b = 'world'
+
+if a != b:
+    print 'a == b'
+else:
+    print ' a == b'
 
 
 
