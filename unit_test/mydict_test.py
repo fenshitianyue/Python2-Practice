@@ -33,6 +33,16 @@ class TestDict(unittest.TestCase):
         with self.assertRaises(AttributeError):
             print "d.empty = {}".format(d.empty)
 
+    def setUp(self):
+        """此函数在每一个测试用例调用之前执行"""
+        print "set up..."
+        # d = Dict()
+
+    def tearDown(self):
+        """此函数在每一个测试用例调用之后执行"""
+        print "tear down..."
+
+
 # 加上这两行代码，可以把测试用例作为普通的py脚本运行: python xx_test.py
 # 否则，需要这样运行测试用例: python -m unittest xx_test
 # if __name__ == '__main__':
